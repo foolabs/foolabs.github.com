@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<head>
+  <title>numbers and stuff - foo-labs.com</title>
+  <style>
+    body {
+      font-family: sans-serif; }
+    
+    tr:nth-child(even) {
+      background-color: #cccccc; }
+    
+    table {
+      border-collapse: collapse; }
+    
+    td {
+      font-family: monospace; }
+    
+    footer {
+      font-family: "Courier new", serif;
+      display: block;
+      font-size: small;
+      color: #cccccc; }
+      footer a {
+        color: inherit;
+        font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>numbers and stuff</h1>
+  <p>how different languages "see" number literals</p>
+  <table>
+  	<tr>
+  		<td></td>
+  		<th>07</th>
+  		<th>08</th>
+  		<th>09</th>
+  		<th>010</th>
+  		<th>0b10</th>
+  		<th>0&#215;10</th>
+  		<th>0d10</th>
+  	</tr>
+  	<tr>
+  		<th>ruby</th>
+  		<td>7</td>
+  		<td>SyntaxError</td>
+  		<td>SyntaxError</td>
+  		<td>8</td>
+  		<td>2</td>
+  		<td>16</td>
+  		<td>10</td>
+  	</tr>
+  	<tr>
+  		<th>python</th>
+  		<td>7</td>
+  		<td>SyntaxError</td>
+  		<td>SyntaxError</td>
+  		<td>8</td>
+  		<td>2</td>
+  		<td>16</td>
+  		<td>SyntaxError</td>
+  	</tr>
+  	<tr>
+  		<th>javascript</th>
+  		<td>7</td>
+  		<td>8</td>
+  		<td>9</td>
+  		<td>8</td>
+  		<td>SyntaxError: Unexpected token <span class="caps">ILLEGAL</span></td>
+  		<td>16</td>
+  		<td>SyntaxError: Unexpected token <span class="caps">ILLEGAL</span></td>
+  	</tr>
+  	<tr>
+  		<th>php</th>
+  		<td>7</td>
+  		<td>0</td>
+  		<td>0</td>
+  		<td>8</td>
+  		<td>SyntaxError</td>
+  		<td>16</td>
+  		<td>SyntaxError</td>
+  	</tr>
+  	<tr>
+  		<th>scala</th>
+  		<td>7</td>
+  		<td>SyntaxError</td>
+  		<td>SyntaxError</td>
+  		<td>8</td>
+  		<td>SyntaxError</td>
+  		<td>16</td>
+  		<td>SyntaxError</td>
+  	</tr>
+  	<tr>
+  		<th>groovy</th>
+  		<td>7</td>
+  		<td>SyntaxError</td>
+  		<td>SyntaxError</td>
+  		<td>8</td>
+  		<td>SyntaxError</td>
+  		<td>16</td>
+  		<td>SyntaxError</td>
+  	</tr>
+  	<tr>
+  		<th>c</th>
+  		<td>7</td>
+  		<td>invalid digit in octal constant</td>
+  		<td>invalid digit in octal constant</td>
+  		<td>8</td>
+  		<td>invalid suffix on integer constan</td>
+  		<td>16</td>
+  		<td>invalid suffix on integer constan</td>
+  	</tr>
+  	<tr>
+  		<th>java</th>
+  		<td>7</td>
+  		<td>number to large</td>
+  		<td>number to large</td>
+  		<td>8</td>
+  		<td>illegal start of expression</td>
+  		<td>16</td>
+  		<td>illegal start of expression</td>
+  	</tr>
+  	<tr>
+  		<th>clang</th>
+  		<td>7</td>
+  		<td>invalid digit in octal constant</td>
+  		<td>invalid digit in octal constant</td>
+  		<td>8</td>
+  		<td>2</td>
+  		<td>16</td>
+  		<td>invalid digit in octal constant</td>
+  	</tr>
+  	<tr>
+  		<th>perl</th>
+  		<td>7</td>
+  		<td>Illegal octal digit</td>
+  		<td>Illegal octal digit</td>
+  		<td>8</td>
+  		<td>2</td>
+  		<td>16</td>
+  		<td>Bareword found where operator expected</td>
+  	</tr>
+  	<tr>
+  		<th>scheme48</th>
+  		<td>7</td>
+  		<td>8</td>
+  		<td>9</td>
+  		<td>10</td>
+  		<td>unsupported number syntax</td>
+  		<td>unsupported number syntax</td>
+  		<td>unsupported number syntax</td>
+  	</tr>
+  	<tr>
+  		<th>io</th>
+  		<td>7</td>
+  		<td>8</td>
+  		<td>9</td>
+  		<td>10</td>
+  		<td>Number does not respond to &#8216;b&#8217;</td>
+  		<td>16</td>
+  		<td>Number does not respond to &#8216;d&#8217;</td>
+  	</tr>
+  	<tr>
+  		<th>pharo</th>
+  		<td>7</td>
+  		<td>8</td>
+  		<td>9</td>
+  		<td>10</td>
+  		<td>SmallInter(Object) doesNotUnderstand #b10</td>
+  		<td>SmallInter(Object) doesNotUnderstand #x10</td>
+  		<td>0</td>
+  	</tr>
+  </table>
+  <script type='text/javascript'>
+    //<![CDATA[
+      var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-15254404-1']);
+        _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+      })();
+    //]]>
+  </script>
+  <footer>
+    <a href='/'>foo-labs.com</a>
+  </footer>
+</body>
